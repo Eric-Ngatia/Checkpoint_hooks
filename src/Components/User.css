@@ -1,0 +1,28 @@
+.container-user{
+    border: 2px solid maroon;
+    margin-top: 1rem;
+}
+
+.user-card{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    border-radius: 50%;
+    border-color: 2px purple;
+    margin-left: 1rem;
+}
+
+.user-id{
+    width: 60%;
+}
+
+
+.delete{
+    height: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: red;
+}

@@ -1,0 +1,14 @@
+.box{
+    border: 2px solid green;
+    padding-bottom: 2rem;
+}
+
+.mb-3{
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 1.5rem 3rem 1.5rem;
+}
+
+.form-control:focus{
+    box-shadow: none;
+}
