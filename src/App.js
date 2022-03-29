@@ -12,6 +12,7 @@ function App() {
   const [users, setUsers] = useState (
     [
       {
+        id: Date.now(),
         name:"Eric N'Gatia",
         image: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Mangekyou_Sharingan_Sasuke.svg'
       }
@@ -20,19 +21,19 @@ function App() {
   );
 
   const deleteUser = (id) =>{
-    let newUsers = [...this.state.users];
+    let newUsers = [...users];
 
-    let index = newUsers.findIndex((user) => user.id === id);
+    let index = newUsers.findIndex((user) => user.id == id);
 
     newUsers.splice(index, 1);
 
-    this.setState({users : newUsers});
+    setUsers({users : newUsers});
 
   }
 
 
   const addUser = (user) =>{
-    let newUsers = [...this.setUsers.users];
+    let newUsers = [...users];
     newUsers.push(user);
 
     this.setUsers({users : newUsers});
@@ -46,10 +47,10 @@ function App() {
     <div className="App">
       <AddUser addUser = {addUser} />
       <hr/>
-      <UserList users={useState.users} deleteUser={deleteUser} />
+      <UserList users={users} deleteUser={deleteUser} />
     </div>
   );
-}
+};
 
 
 export default App;

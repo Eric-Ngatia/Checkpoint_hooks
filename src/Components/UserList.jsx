@@ -5,12 +5,16 @@ import User from './User';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-export const UserList=()=>{
+export const UserList=(props)=>{
     return (
-        <div className='card'>
-            {this.props.users.map(user => <User key={user.id} user={user} deleteUser={this.props.deleteUser}/>)}  
+        <div className=''>
+            {props.users.map(user =>
+                <User 
+                id={user.id} 
+                user={user} 
+                deleteUser={props.deleteUser}/>)}  
         </div>
     )
 }
 
-export default UserList
+export default UserList;

@@ -10,17 +10,22 @@ function AddUser() {
     const [name, setName] = useState(
         [
             {
-                name:""
+                name:"",
             }
         ]
     )
 
-    const addPerson=()=>{
-        this.props.addUser({id: Date.now(), name: name })
+    const addPerson=(e)=>{
+        e.preventDefault ();
+        props.addUser({
+            id: Date.now(), 
+            name: name, 
+            image: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Mangekyou_Sharingan_Sasuke.svg'
+        })
     }
 
-    const handleChange = (e) =>{
-        this.setState({name : e.target.value})
+    const handleChange = (props) =>{
+        this.useState({name : e.target.value})
     }
 
 
